@@ -1,18 +1,21 @@
-# LilliaCore
+# Lillia Platform API
+
+[![ci](https://github.com/deolivtiago/lillia-api/actions/workflows/ci.yml/badge.svg)](https://github.com/deolivtiago/lillia-api/actions/workflows/ci.yml)
+[![coverage](https://coveralls.io/repos/github/deolivtiago/lillia-api/badge.svg)](https://coveralls.io/github/deolivtiago/lillia-api)
+
+## Setup
+
+Requirements:
+
+- `docker v29.1.2+`
+- `docker-compose v2.40.3+`
+- `docker-buildx v0.30.1+`
+
+### Getting started
 
 To start your Phoenix server:
 
-* Run `mix setup` to install and setup dependencies
-* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+* Rename the `default.env` file to `.env` and set the environment variables
+* Run docker services with `docker compose up -d`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
