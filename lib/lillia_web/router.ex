@@ -1,17 +1,16 @@
-defmodule LilliaCoreWeb.Router do
-  use LilliaCoreWeb, :router
+defmodule LilliaWeb.Router do
+  use LilliaWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", LilliaCoreWeb do
+  scope "/api", LilliaWeb do
     pipe_through :api
   end
 
   # Enable Swoosh mailbox preview in development
   if Application.compile_env(:lillia, :dev_routes) do
-
     scope "/dev" do
       pipe_through [:fetch_session, :protect_from_forgery]
 

@@ -1,4 +1,4 @@
-defmodule LilliaCoreWeb.Endpoint do
+defmodule LilliaWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :lillia
 
   # The session will be stored in the cookie and signed,
@@ -24,7 +24,7 @@ defmodule LilliaCoreWeb.Endpoint do
     at: "/",
     from: :lillia,
     gzip: not code_reloading?,
-    only: LilliaCoreWeb.static_paths()
+    only: LilliaWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -44,5 +44,5 @@ defmodule LilliaCoreWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug LilliaCoreWeb.Router
+  plug LilliaWeb.Router
 end

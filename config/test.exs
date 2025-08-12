@@ -15,7 +15,7 @@ config :lillia, LilliaCore.Repo,
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :lillia, LilliaCoreWeb.Endpoint,
+config :lillia, LilliaWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "OmI+cUX2hiDMQa/416JWARHGaxUt+19sVK6ZoZMs6KYo1jo5yx1ttG71RDiAj37T",
   server: false

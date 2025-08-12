@@ -1,12 +1,12 @@
-defmodule LilliaCoreWeb do
+defmodule LilliaWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use LilliaCoreWeb, :controller
-      use LilliaCoreWeb, :html
+      use LilliaWeb, :controller
+      use LilliaWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -39,7 +39,7 @@ defmodule LilliaCoreWeb do
     quote do
       use Phoenix.Controller, formats: [:html, :json]
 
-      use Gettext, backend: LilliaCoreWeb.Gettext
+      use Gettext, backend: LilliaWeb.Gettext
 
       import Plug.Conn
 
@@ -50,9 +50,9 @@ defmodule LilliaCoreWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: LilliaCoreWeb.Endpoint,
-        router: LilliaCoreWeb.Router,
-        statics: LilliaCoreWeb.static_paths()
+        endpoint: LilliaWeb.Endpoint,
+        router: LilliaWeb.Router,
+        statics: LilliaWeb.static_paths()
     end
   end
 

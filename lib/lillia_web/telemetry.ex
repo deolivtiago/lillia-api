@@ -1,4 +1,4 @@
-defmodule LilliaCoreWeb.Telemetry do
+defmodule LilliaWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -87,7 +87,7 @@ defmodule LilliaCoreWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {LilliaCoreWeb, :count_users, []}
+      # {LilliaWeb, :count_users, []}
     ]
   end
 end

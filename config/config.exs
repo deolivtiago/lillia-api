@@ -13,11 +13,11 @@ config :lillia,
   generators: [timestamp_type: :utc_datetime, binary_id: true]
 
 # Configures the endpoint
-config :lillia, LilliaCoreWeb.Endpoint,
+config :lillia, LilliaWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
-    formats: [json: LilliaCoreWeb.ErrorJSON],
+    formats: [json: LilliaWeb.ErrorJSON],
     layout: false
   ],
   pubsub_server: LilliaCore.PubSub,
