@@ -112,6 +112,9 @@ msgid_plural "should be at most %{count} byte(s)"
 msgstr[0] ""
 msgstr[1] ""
 
+msgid "can only be changed by resetting"
+msgstr ""
+
 ## From Ecto.Changeset.validate_number/3
 msgid "must be less than %{number}"
 msgstr ""
