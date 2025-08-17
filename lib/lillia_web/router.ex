@@ -32,6 +32,8 @@ defmodule LilliaWeb.Router do
     pipe_through [:api, :auth]
 
     get "/auth/user-info", AuthController, :user_info
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Enable Swoosh mailbox preview in development
