@@ -32,6 +32,14 @@ config :lillia, LilliaWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :lillia, LilliaCore.Mailer, adapter: Swoosh.Adapters.Local
 
+# Configures a Json Web Token secret key
+config :lillia, LilliaCore.JsonWebToken,
+  jwt_secret_key:
+    System.get_env(
+      "JWT_SECRET_KEY",
+      "vDnvwFALDgLVljDVyFZVqJhQbZ9C/xNNuw1raBH7yd3ZulXtYvjzOnnBtokEbc4W"
+    )
+
 # Configures the database timezone
 config :elixir, :time_zone_database, Tz.TimeZoneDatabase
 
