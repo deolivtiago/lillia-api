@@ -2,6 +2,7 @@ defmodule LilliaCore.Access.RolesTest do
   use LilliaCore.DataCase, async: true
 
   import LilliaCore.Access.RoleFixtures
+  import LilliaCore.Access.UserFixtures
 
   alias Ecto.Changeset
   alias LilliaCore.Access.Roles
@@ -102,6 +103,16 @@ defmodule LilliaCore.Access.RolesTest do
 
       assert %Changeset{valid?: false} = changeset
       assert Enum.member?(errors.id, "not found")
+    end
+
+    test "error when role can't be deleted", %{role: role} do
+      Map.new() |> Map.put(:role_id, role.id) |> insert_user()
+
+      assert {:error, changeset} = Roles.delete_role(role)
+      errors = errors_on(changeset)
+
+      assert %Changeset{valid?: false} = changeset
+      assert Enum.member?(errors.id, "can't be deleted")
     end
   end
 
