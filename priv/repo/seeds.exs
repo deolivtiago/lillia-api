@@ -13,5 +13,5 @@
 now = DateTime.utc_now(:second)
 
 LilliaCore.Repo.insert_all(LilliaCore.Access.Roles.Role, [
-  %{id: "user", inserted_at: now, updated_at: now}
+  %{id: "user", permissions: ["GET:api/auth/user-info"], inserted_at: now, updated_at: now}
 ])
