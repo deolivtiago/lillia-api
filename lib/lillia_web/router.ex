@@ -35,6 +35,7 @@ defmodule LilliaWeb.Router do
 
     resources "/users", UserController, except: [:new, :edit]
     resources "/roles", RoleController, except: [:new, :edit]
+    resources "/persons", PersonController, except: [:new, :edit]
   end
 
   # Enable Swoosh mailbox preview in development
