@@ -1,8 +1,7 @@
-version: "3.8"
 services:
   postgres:
     container_name: lillia_dev
-    image: postgres:latest
+    image: postgres:17
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
