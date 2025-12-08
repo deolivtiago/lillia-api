@@ -1,0 +1,23 @@
+{
+  "skip_files": [
+    "test",
+    "lib/lillia_web.ex",
+    "lib/lillia_core.ex",
+    "lib/lillia_core/application.ex",
+    "lib/lillia_core/mailer.ex",
+    "lib/lillia_core/release.ex",
+    "lib/lillia_core/repo.ex",
+    "lib/lillia_web/gettext.ex",
+    "lib/lillia_web/router.ex",
+    "lib/lillia_web/telemetry.ex",
+    "lib/lillia_web/endpoint.ex",
+    "lib/lillia_web/views/error_json.ex"
+  ],
+  "terminal_options": {
+    "file_column_width": 80
+  },
+  "coverage_options": {
+    "treat_no_relevant_lines_as_covered": true,
+    "minimum_coverage": 75
+  }
+}
