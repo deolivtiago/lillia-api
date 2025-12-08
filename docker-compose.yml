@@ -1,5 +1,23 @@
 services:
 
+  web:
+    container_name: web
+    image: app:latest
+    restart: on-failure:3
+
+    pull_policy: build
+    build: .
+
+    depends_on:
+      - db
+
+    network_mode: host
+
+    env_file:
+      - path: ./default.env
+      - path: ./.env
+        required: false
+
   db:
     container_name: db
     image: postgres:17-trixie
