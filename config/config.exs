@@ -32,6 +32,9 @@ config :lillia, LilliaWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :lillia, LilliaCore.Mailer, adapter: Swoosh.Adapters.Local
 
+# Configures the database timezone
+config :elixir, :time_zone_database, Tz.TimeZoneDatabase
+
 # Configures Elixir's Logger
 config :logger, :default_formatter,
   format: "$time $metadata[$level] $message\n",
