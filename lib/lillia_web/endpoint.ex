@@ -11,6 +11,11 @@ defmodule LilliaWeb.Endpoint do
     same_site: "Lax"
   ]
 
+  socket "/ws", LilliaWeb.UserSocket,
+    websocket: [path: "/"],
+    auth_token: true,
+    longpoll: false
+
   # socket "/live", Phoenix.LiveView.Socket,
   #   websocket: [connect_info: [session: @session_options]],
   #   longpoll: [connect_info: [session: @session_options]]
