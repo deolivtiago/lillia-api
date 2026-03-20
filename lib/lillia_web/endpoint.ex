@@ -38,6 +38,7 @@ defmodule LilliaWeb.Endpoint do
     plug Phoenix.Ecto.CheckRepoStatus, otp_app: :lillia
   end
 
+  plug CORSPlug
   plug Plug.RequestId
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 

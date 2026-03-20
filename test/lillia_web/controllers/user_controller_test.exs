@@ -22,11 +22,11 @@ defmodule LilliaWeb.UserControllerTest do
       assert %{"data" => [user_data]} = json_response(conn, :ok)
 
       assert user_data["id"] == user.id
-      assert user_data["full_name"] == user.full_name
+      assert user_data["fullName"] == user.full_name
       assert user_data["email"] == user.email
-      assert user_data["avatar_url"] == user.avatar_url
-      assert user_data["role_id"] == user.role_id
-      assert user_data["is_verified"] == user.verified?
+      assert user_data["avatarUrl"] == user.avatar_url
+      assert user_data["roleId"] == user.role_id
+      assert user_data["isVerified"] == user.verified?
     end
   end
 
@@ -41,11 +41,11 @@ defmodule LilliaWeb.UserControllerTest do
       assert %{"data" => user_data} = json_response(conn, :created)
 
       assert user_data["id"]
-      assert user_data["full_name"] == user_params.full_name
+      assert user_data["fullName"] == user_params.full_name
       assert user_data["email"] == user_params.email
-      assert user_data["avatar_url"] == user_params.avatar_url
-      assert user_data["role_id"] == user_params.role_id
-      assert user_data["is_verified"] == user_params.verified?
+      assert user_data["avatarUrl"] == user_params.avatar_url
+      assert user_data["roleId"] == user_params.role_id
+      assert user_data["isVerified"] == user_params.verified?
     end
 
     test "error when the user params are invalid", %{conn: conn} do
@@ -55,7 +55,7 @@ defmodule LilliaWeb.UserControllerTest do
 
       assert %{"errors" => errors} = json_response(conn, :unprocessable_entity)
 
-      assert Enum.member?(errors["full_name"], "can't be blank")
+      assert Enum.member?(errors["fullName"], "can't be blank")
       assert Enum.member?(errors["email"], "can't be blank")
       assert Enum.member?(errors["password"], "should be at least 6 character(s)")
     end
@@ -70,11 +70,11 @@ defmodule LilliaWeb.UserControllerTest do
       assert %{"data" => user_data} = json_response(conn, :ok)
 
       assert user_data["id"] == user.id
-      assert user_data["full_name"] == user.full_name
+      assert user_data["fullName"] == user.full_name
       assert user_data["email"] == user.email
-      assert user_data["avatar_url"] == user.avatar_url
-      assert user_data["role_id"] == user.role_id
-      assert user_data["is_verified"] == user.verified?
+      assert user_data["avatarUrl"] == user.avatar_url
+      assert user_data["roleId"] == user.role_id
+      assert user_data["isVerified"] == user.verified?
     end
 
     test "error when the user id has invalid format", %{conn: conn} do
@@ -105,11 +105,11 @@ defmodule LilliaWeb.UserControllerTest do
       assert %{"data" => user_data} = json_response(conn, :ok)
 
       assert user_data["id"] == user.id
-      assert user_data["full_name"] == user_params.full_name
+      assert user_data["fullName"] == user_params.full_name
       assert user_data["email"] == user_params.email
-      assert user_data["avatar_url"] == user_params.avatar_url
-      assert user_data["role_id"] == user_params.role_id
-      assert user_data["is_verified"] == user_params.verified?
+      assert user_data["avatarUrl"] == user_params.avatar_url
+      assert user_data["roleId"] == user_params.role_id
+      assert user_data["isVerified"] == user_params.verified?
     end
 
     test "error when the user params are invalid", %{conn: conn, user: user} do
@@ -119,10 +119,10 @@ defmodule LilliaWeb.UserControllerTest do
 
       assert %{"errors" => errors} = json_response(conn, :unprocessable_entity)
 
-      assert Enum.member?(errors["full_name"], "is invalid")
+      assert Enum.member?(errors["fullName"], "is invalid")
       assert Enum.member?(errors["email"], "has invalid format")
       assert Enum.member?(errors["password"], "can only be changed by resetting")
-      assert Enum.member?(errors["role_id"], "is invalid")
+      assert Enum.member?(errors["roleId"], "is invalid")
     end
   end
 

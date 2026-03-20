@@ -25,11 +25,7 @@ defmodule LilliaWeb.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   @impl true
-  def connect(params, socket, connect_info) do
-    IO.inspect(connect_info, label: :connect_info)
-    IO.inspect(params, label: :params)
-    IO.inspect(socket, label: :socket)
-
+  def connect(_params, socket, _connect_info) do
     {:ok, assign(socket, :current_user, %{id: 1, name: "John Doe"})}
   end
 

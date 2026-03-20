@@ -4,9 +4,6 @@ defmodule LilliaWeb.RoomChannel do
 
   @impl true
   def join("room:lobby", payload, socket) do
-    IO.inspect(payload, label: :payload)
-    IO.inspect(socket, label: :socket)
-
     if authorized?(payload) do
       {:ok, socket}
     else
@@ -30,8 +27,7 @@ defmodule LilliaWeb.RoomChannel do
   end
 
   # Add authorization logic here as required.
-  defp authorized?(payload) do
-    IO.inspect(payload, label: :payload)
+  defp authorized?(_payload) do
     true
   end
 end

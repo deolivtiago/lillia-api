@@ -64,7 +64,10 @@ defmodule LilliaCore.MixProject do
       {:tz, "~> 0.28"},
       {:argon2_elixir, "~> 4.1"},
       {:nimble_totp, "~> 1.0"},
-      {:jose, "~> 1.11"}
+      {:jose, "~> 1.11"},
+      {:cors_plug, "~> 3.0"},
+      {:recase, "~> 0.5"},
+      {:morpheus, "~> 0.1"}
     ]
   end
 
